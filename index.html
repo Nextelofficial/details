@@ -125,3 +125,83 @@ Create your account to start earning rewards.
 <div class="input-group">
 <label>Full Name</label>
 <input type="text" id="name">
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+<input type="email" id="email">
+</div>
+
+<div class="input-group">
+<label>Phone Number</label>
+<input type="tel" id="phone">
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" id="password">
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+<input type="password" id="confirm">
+</div>
+
+<div class="input-group">
+<label>Referral Code (Optional)</label>
+<input type="text" id="referral">
+</div>
+
+<div class="checkbox">
+<input type="checkbox" id="terms">
+<label for="terms">
+I agree to the Terms of Service and Privacy Policy.
+</label>
+</div>
+
+<button onclick="register()">
+Create Account
+</button>
+
+<div class="login">
+Already have an account?
+<a href="login.html">Login</a>
+</div>
+
+</div>
+
+<script>
+
+function register(){
+
+let name=document.getElementById("name").value.trim();
+let email=document.getElementById("email").value.trim();
+let phone=document.getElementById("phone").value.trim();
+let password=document.getElementById("password").value;
+let confirm=document.getElementById("confirm").value;
+let terms=document.getElementById("terms").checked;
+
+if(name=="" || email=="" || phone=="" || password=="" || confirm==""){
+alert("Please fill in all required fields.");
+return;
+}
+
+if(password!==confirm){
+alert("Passwords do not match.");
+return;
+}
+
+if(!terms){
+alert("Please agree to the Terms of Service.");
+return;
+}
+
+// Open your external link
+window.location.href="https://YOUR-EXTERNAL-LINK.com";
+
+}
+
+</script>
+
+</body>
+</html>
