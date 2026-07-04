@@ -3,96 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nextel Connect Registration</title>
+<title>Nextel Connect - Registration</title>
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#f5f6f8;
-display:flex;
-justify-content:center;
-padding:20px;
+    background:#f4f6f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
 }
 
 .container{
-width:100%;
-max-width:420px;
-background:#fff;
-padding:25px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+    width:100%;
+    max-width:420px;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
 }
 
-h2{
-text-align:center;
-color:#005b46;
-margin-bottom:25px;
+.logo{
+    text-align:center;
+    color:#005b46;
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
 }
 
 .input-group{
-margin-bottom:18px;
+    margin-bottom:18px;
 }
 
 label{
-display:block;
-margin-bottom:6px;
-font-weight:bold;
-color:#333;
+    display:block;
+    margin-bottom:6px;
+    color:#333;
+    font-weight:bold;
 }
 
-input,select{
-width:100%;
-padding:14px;
-border:1px solid #ccc;
-border-radius:10px;
-font-size:16px;
-outline:none;
+input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
 }
 
-input:focus,
-select:focus{
-border-color:#005b46;
+input:focus{
+    outline:none;
+    border-color:#005b46;
 }
 
 .checkbox{
-display:flex;
-align-items:flex-start;
-gap:10px;
-margin:15px 0;
-font-size:14px;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin:20px 0;
+    color:#555;
+    font-size:14px;
+}
+
+.checkbox input{
+    width:auto;
+    margin-top:3px;
 }
 
 button{
-width:100%;
-padding:16px;
-background:#005b46;
-color:#fff;
-border:none;
-border-radius:12px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#005b46;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 button:hover{
-background:#00735a;
+    background:#00735a;
 }
 
 .login{
-text-align:center;
-margin-top:20px;
+    text-align:center;
+    margin-top:20px;
 }
 
 .login a{
-color:#005b46;
-text-decoration:none;
-font-weight:bold;
+    color:#005b46;
+    text-decoration:none;
+    font-weight:bold;
 }
 </style>
 
@@ -101,70 +116,12 @@ font-weight:bold;
 
 <div class="container">
 
-<h2>Create Your Account</h2>
+<div class="logo">Nextel Connect</div>
 
-<form action="https://YOUR_API_OR_REGISTER_PAGE" method="POST">
+<p class="subtitle">
+Create your account to start earning rewards.
+</p>
 
 <div class="input-group">
 <label>Full Name</label>
-<input type="text" name="fullname" required>
-</div>
-
-<div class="input-group">
-<label>Email Address</label>
-<input type="email" name="email" required>
-</div>
-
-<div class="input-group">
-<label>Phone Number</label>
-<input type="tel" name="phone" required>
-</div>
-
-<div class="input-group">
-<label>Country</label>
-<select name="country" required>
-<option value="">Select Country</option>
-<option>Nigeria</option>
-<option>Ghana</option>
-<option>Kenya</option>
-<option>South Africa</option>
-<option>United Kingdom</option>
-<option>United States</option>
-</select>
-</div>
-
-<div class="input-group">
-<label>Password</label>
-<input type="password" name="password" required>
-</div>
-
-<div class="input-group">
-<label>Confirm Password</label>
-<input type="password" name="confirm_password" required>
-</div>
-
-<div class="input-group">
-<label>Referral Code (Optional)</label>
-<input type="text" name="referral">
-</div>
-
-<div class="checkbox">
-<input type="checkbox" required>
-<span>I agree to the Terms of Service and Privacy Policy.</span>
-</div>
-
-<button type="submit">
-Create Account
-</button>
-
-</form>
-
-<div class="login">
-Already have an account?
-<a href="login.html">Login</a>
-</div>
-
-</div>
-
-</body>
-  </html>
+<input type="text" id="name">
